@@ -19,7 +19,7 @@ export default function Home() {
           height="480px"
           className="h-48 w-48 rounded-full"
         />
-        <div className="mx-auto mt-16 max-w-5xl rounded-lg bg-white py-12 pl-12 pr-24 shadow-lg dark:bg-gray-800">
+        <div className="mx-auto mt-16 max-w-5xl rounded-lg bg-white py-12 px-6 shadow-lg dark:bg-gray-800">
           <h2 className="mt-2 text-2xl font-semibold text-gray-800 dark:text-white md:mt-0 md:text-3xl">
             Missão e valores
           </h2>
