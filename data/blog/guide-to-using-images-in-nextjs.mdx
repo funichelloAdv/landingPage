@@ -7,70 +7,86 @@ summary: 'In this article we introduce adding images in the tailwind starter blo
 authors: ['sparrowhawk']
 ---
 
-# Introduction
-
-The tailwind starter blog has out of the box support for [Next.js's built-in image component](https://nextjs.org/docs/api-reference/next/image) and automatically swaps out default image tags in markdown or mdx documents to use the Image component provided.
-
-# Usage
-
-To use in a new page route / javascript file, simply import the image component and call it e.g.
-
-```js
-import Image from 'next/image'
-
-function Home() {
-  return (
-    <>
-      <h1>My Homepage</h1>
-      <Image src="/me.png" alt="Picture of the author" width={500} height={500} />
-      <p>Welcome to my homepage!</p>
-    </>
-  )
-}
-
-export default Home
-```
-
-For a markdown file, the default image tag can be used and the default `img` tag gets replaced by the `Image` component in the build process.
-
-Assuming we have a file called `ocean.jpg` in `data/img/ocean.jpg`, the following line of code would generate the optimized image.
-
-```
-![ocean](/static/images/ocean.jpg)
-```
-
-Alternatively, since we are using mdx, we can just use the image component directly! Note, that you would have to provide a fixed width and height. The `img` tag method parses the dimension automatically.
-
-```js
-<Image alt="ocean" src="/static/images/ocean.jpg" width={256} height={128} />
-```
-
-_Note_: If you try to save the image, it is in webp format, if your browser supports it!
-
-![ocean](/static/images/ocean.jpeg)
+## Overview
 
 <p>
-  Photo by [YUCAR
-  FotoGrafik](https://unsplash.com/@yucar?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/s/photos/sea?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
+  cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis
+  ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia
+  arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+  himenaeos. Curabitur sodales ligula in libero.{' '}
 </p>
 
-# Benefits
+<p>
+  Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem
+  at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas
+  porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis
+  ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod
+  in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per
+  conubia nostra, per inceptos himenaeos.{' '}
+</p>
 
-- Smaller image size with Webp (~30% smaller than jpeg)
-- Responsive images - the correct image size is served based on the user's viewport
-- Lazy loading - images load as they are scrolled to the viewport
-- Avoids [Cumulative Layout Shift](https://web.dev/cls/)
-- Optimization on demand instead of build-time - no increase in build time!
+<p>
+  Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum
+  ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus
+  consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna
+  luctus suscipit. Sed lectus.{' '}
+</p>
 
-# Limitations
+<p>
+  Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis
+  sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et
+  ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam.
+  In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec
+  lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut
+  ultrices ultrices enim. Curabitur sit amet mauris.{' '}
+</p>
 
-- Due to the reliance on `next/image`, unless you are using an external image CDN like Cloudinary or Imgix, it is practically required to use Vercel for hosting. This is because the component acts like a serverless function that calls a highly optimized image CDN.
+<p>
+  Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa.
+  Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis
+  tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam.
+  Aenean laoreet. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci
+  risus, accumsan porttitor, cursus quis, aliquet eget, justo.{' '}
+</p>
 
-  If you do not want to be tied to Vercel, you can remove `imgToJsx` in `remarkPlugins` in `lib/mdx.js`. This would avoid substituting the default `img` tag.
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
+  cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis
+  ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia
+  arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+  himenaeos. Curabitur sodales ligula in libero.{' '}
+</p>
 
-  Alternatively, one could wait for image optimization at build time to be supported. A different library, [next-optimized-images](https://github.com/cyrilwanner/next-optimized-images) does that, although it requires transforming the images through webpack which is not done here.
+<p>
+  Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem
+  at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas
+  porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis
+  ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod
+  in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per
+  conubia nostra, per inceptos himenaeos.{' '}
+</p>
 
-- Images from external links are not passed through `next/image`
-- All images have to be stored in the `public` folder e.g `/static/images/ocean.jpeg`
+<p>
+  Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum
+  ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus
+  consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna
+  luctus suscipit. Sed lectus.{' '}
+</p>
+
+<p>
+  Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis
+  sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et
+  ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam.
+  In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec
+  lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut
+  ultrices ultrices enim. Curabitur sit amet mauris.{' '}
+</p>
+
+<p>
+  Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa.
+  Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis
+  tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam.
+  Aenean laoreet. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci
+  risus, accumsan porttitor, cursus quis, aliquet eget, justo.{' '}
+</p>

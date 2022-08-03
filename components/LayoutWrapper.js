@@ -1,22 +1,24 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
+import logo from '@/data/sua-logo.png'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import Image from 'next/image'
 
 const LayoutWrapper = ({ children }) => {
   return (
     <SectionContainer>
       <div className="flex h-screen flex-col justify-between">
-        <header className="flex items-center justify-between py-10">
-          <div>
+        <header className="flex-col items-center justify-center py-10">
+          <div className="flex justify-center">
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">
                 <div className="mr-3">
-                  <Logo />
+                  {/*<Logo />*/}
+                  <Image src={logo} alt="logo" width="125px" height="75px" />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
                   <div className="hidden h-6 text-2xl font-semibold sm:block">
@@ -28,7 +30,7 @@ const LayoutWrapper = ({ children }) => {
               </div>
             </Link>
           </div>
-          <div className="flex items-center text-base leading-5">
+          <div className="flex items-center justify-center text-base leading-5">
             <div className="hidden sm:block">
               {headerNavLinks.map((link) => (
                 <Link

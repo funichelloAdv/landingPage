@@ -6,136 +6,86 @@ draft: false
 summary: 'How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.'
 ---
 
-# Introduction
+## Overview
 
-Parsing and display of math equations is included in this blog template. Parsing of math is enabled by `remark-math` and `rehype-katex`.
-KaTeX and its associated font is included in `_document.js` so feel free to use it on any page.
-^[For the full list of supported TeX functions, check out the [KaTeX documentation](https://katex.org/docs/supported.html)]
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
+  cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis
+  ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia
+  arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+  himenaeos. Curabitur sodales ligula in libero.{' '}
+</p>
 
-Inline math symbols can be included by enclosing the term between the `$` symbol.
+<p>
+  Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem
+  at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas
+  porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis
+  ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod
+  in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per
+  conubia nostra, per inceptos himenaeos.{' '}
+</p>
 
-Math code blocks are denoted by `$$`.
+<p>
+  Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum
+  ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus
+  consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna
+  luctus suscipit. Sed lectus.{' '}
+</p>
 
-If you intend to use the `$` sign instead of math, you can escape it (`\$`), or specify the HTML entity (`&dollar;`) [^2]
+<p>
+  Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis
+  sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et
+  ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam.
+  In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec
+  lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut
+  ultrices ultrices enim. Curabitur sit amet mauris.{' '}
+</p>
 
-Inline or manually enumerated footnotes are also supported. Click on the links above to see them in action.
+<p>
+  Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa.
+  Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis
+  tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam.
+  Aenean laoreet. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci
+  risus, accumsan porttitor, cursus quis, aliquet eget, justo.{' '}
+</p>
 
-[^2]: \$10 and &dollar;20.
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
+  cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis
+  ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia
+  arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+  himenaeos. Curabitur sodales ligula in libero.{' '}
+</p>
 
-# Deriving the OLS Estimator
+<p>
+  Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem
+  at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas
+  porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis
+  ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod
+  in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per
+  conubia nostra, per inceptos himenaeos.{' '}
+</p>
 
-Using matrix notation, let $n$ denote the number of observations and $k$ denote the number of regressors.
+<p>
+  Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum
+  ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus
+  consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna
+  luctus suscipit. Sed lectus.{' '}
+</p>
 
-The vector of outcome variables $\mathbf{Y}$ is a $n \times 1$ matrix,
+<p>
+  Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis
+  sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et
+  ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam.
+  In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec
+  lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut
+  ultrices ultrices enim. Curabitur sit amet mauris.{' '}
+</p>
 
-```tex
-\mathbf{Y} = \left[\begin{array}
-  {c}
-  y_1 \\
-  . \\
-  . \\
-  . \\
-  y_n
-\end{array}\right]
-```
-
-$$
-\mathbf{Y} = \left[\begin{array}
-  {c}
-  y_1 \\
-  . \\
-  . \\
-  . \\
-  y_n
-\end{array}\right]
-$$
-
-The matrix of regressors $\mathbf{X}$ is a $n \times k$ matrix (or each row is a $k \times 1$ vector),
-
-```latex
-\mathbf{X} = \left[\begin{array}
-  {ccccc}
-  x_{11} & . & . & . & x_{1k} \\
-  . & . & . & . & .  \\
-  . & . & . & . & .  \\
-  . & . & . & . & .  \\
-  x_{n1} & . & . & . & x_{nn}
-\end{array}\right] =
-\left[\begin{array}
-  {c}
-  \mathbf{x}'_1 \\
-  . \\
-  . \\
-  . \\
-  \mathbf{x}'_n
-\end{array}\right]
-```
-
-$$
-\mathbf{X} = \left[\begin{array}
-  {ccccc}
-  x_{11} & . & . & . & x_{1k} \\
-  . & . & . & . & .  \\
-  . & . & . & . & .  \\
-  . & . & . & . & .  \\
-  x_{n1} & . & . & . & x_{nn}
-\end{array}\right] =
-\left[\begin{array}
-  {c}
-  \mathbf{x}'_1 \\
-  . \\
-  . \\
-  . \\
-  \mathbf{x}'_n
-\end{array}\right]
-$$
-
-The vector of error terms $\mathbf{U}$ is also a $n \times 1$ matrix.
-
-At times it might be easier to use vector notation. For consistency, I will use the bold small x to denote a vector and capital letters to denote a matrix. Single observations are denoted by the subscript.
-
-## Least Squares
-
-**Start**:  
-$$y_i = \mathbf{x}'_i \beta + u_i$$
-
-**Assumptions**:
-
-1. Linearity (given above)
-2. $E(\mathbf{U}|\mathbf{X}) = 0$ (conditional independence)
-3. rank($\mathbf{X}$) = $k$ (no multi-collinearity i.e. full rank)
-4. $Var(\mathbf{U}|\mathbf{X}) = \sigma^2 I_n$ (Homoskedascity)
-
-**Aim**:  
-Find $\beta$ that minimises the sum of squared errors:
-
-$$
-Q = \sum_{i=1}^{n}{u_i^2} = \sum_{i=1}^{n}{(y_i - \mathbf{x}'_i\beta)^2} = (Y-X\beta)'(Y-X\beta)
-$$
-
-**Solution**:  
-Hints: $Q$ is a $1 \times 1$ scalar, by symmetry $\frac{\partial b'Ab}{\partial b} = 2Ab$.
-
-Take matrix derivative w.r.t $\beta$:
-
-```tex
-\begin{aligned}
-  \min Q           & = \min_{\beta} \mathbf{Y}'\mathbf{Y} - 2\beta'\mathbf{X}'\mathbf{Y} +
-  \beta'\mathbf{X}'\mathbf{X}\beta \\
-                   & = \min_{\beta} - 2\beta'\mathbf{X}'\mathbf{Y} + \beta'\mathbf{X}'\mathbf{X}\beta \\
-  \text{[FOC]}~~~0 & =  - 2\mathbf{X}'\mathbf{Y} + 2\mathbf{X}'\mathbf{X}\hat{\beta}                  \\
-  \hat{\beta}      & = (\mathbf{X}'\mathbf{X})^{-1}\mathbf{X}'\mathbf{Y}                              \\
-                   & = (\sum^{n} \mathbf{x}_i \mathbf{x}'_i)^{-1} \sum^{n} \mathbf{x}_i y_i
-\end{aligned}
-```
-
-$$
-\begin{aligned}
-  \min Q           & = \min_{\beta} \mathbf{Y}'\mathbf{Y} - 2\beta'\mathbf{X}'\mathbf{Y} +
-  \beta'\mathbf{X}'\mathbf{X}\beta \\
-                   & = \min_{\beta} - 2\beta'\mathbf{X}'\mathbf{Y} + \beta'\mathbf{X}'\mathbf{X}\beta \\
-  \text{[FOC]}~~~0 & =  - 2\mathbf{X}'\mathbf{Y} + 2\mathbf{X}'\mathbf{X}\hat{\beta}                  \\
-  \hat{\beta}      & = (\mathbf{X}'\mathbf{X})^{-1}\mathbf{X}'\mathbf{Y}                              \\
-                   & = (\sum^{n} \mathbf{x}_i \mathbf{x}'_i)^{-1} \sum^{n} \mathbf{x}_i y_i
-\end{aligned}
-$$
+<p>
+  Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa.
+  Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis
+  tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam.
+  Aenean laoreet. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci
+  risus, accumsan porttitor, cursus quis, aliquet eget, justo.{' '}
+</p>
