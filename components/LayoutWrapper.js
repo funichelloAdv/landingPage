@@ -7,6 +7,7 @@ import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import Image from 'next/image'
+import WhatsappButton from './WhatsappButton'
 
 const LayoutWrapper = ({ children }) => {
   return (
@@ -48,6 +49,7 @@ const LayoutWrapper = ({ children }) => {
         </header>
         <main className="mb-auto">{children}</main>
         <Footer />
+        <WhatsappButton />
       </div>
     </SectionContainer>
   )

@@ -3,7 +3,6 @@ import dynamic from 'next/dynamic'
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import Image from 'next/image'
-import FloatingWhatsApp from 'react-floating-whatsapp'
 
 const MapComponent = dynamic(() => import('../components/MapComponent'), { ssr: false })
 
@@ -35,16 +34,7 @@ export default function Home() {
             aliquam magna eget ultrices placerat.
           </p>
         </div>
-        <div className="max-w-7xl">
-          <MapComponent />
-        </div>
-        <FloatingWhatsApp
-          accountName="Atendimento"
-          phoneNumber="5516988213242"
-          statusMessage=""
-          chatMessage="Olá, como podemos te ajudar hoje?"
-          placeholder="Escreva uma mensagem..."
-        />
+        <MapComponent />
       </div>
     </>
   )

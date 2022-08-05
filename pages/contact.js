@@ -25,10 +25,26 @@ export default function Contact() {
                     Nome
                   </label>
                   <input
-                    className="mb-2 block w-full appearance-none rounded border border-red-500 bg-gray-200 py-2 px-2 leading-tight text-gray-700 focus:bg-white focus:outline-none"
+                    className="mb-2 block w-full appearance-none rounded border bg-gray-200 py-2 px-2 leading-tight text-gray-700 focus:bg-white focus:outline-none"
                     id="grid-name"
                     type="text"
-                    placeholder="Nome"
+                    placeholder="Seu nome"
+                  />
+                </div>
+              </div>
+              <div className="-mx-3 mb-2 flex flex-wrap">
+                <div className="mb-6 w-full px-3 md:mb-0">
+                  <label
+                    className="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
+                    htmlFor="grid-phone"
+                  >
+                    Telefone
+                  </label>
+                  <input
+                    className="mb-2 block w-full appearance-none rounded border bg-gray-200 py-2 px-2 leading-tight text-gray-700 focus:bg-white focus:outline-none"
+                    id="grid-phone"
+                    type="phone"
+                    placeholder="Seu telefone"
                   />
                 </div>
               </div>
@@ -41,11 +57,77 @@ export default function Contact() {
                     Email
                   </label>
                   <input
-                    className="mb-2 block w-full appearance-none rounded border border-red-500 bg-gray-200 py-2 px-2 leading-tight text-gray-700 focus:bg-white focus:outline-none"
+                    className="mb-2 block w-full appearance-none rounded border bg-gray-200 py-2 px-2 leading-tight text-gray-700 focus:bg-white focus:outline-none"
                     id="grid-email"
-                    type="email"
-                    placeholder="exemplo@exemplo.com"
+                    type="e-mail"
+                    placeholder="Seu email"
                   />
+                </div>
+              </div>
+              <div className="-mx-3 mb-2 flex flex-wrap">
+                <div className="mb-6 w-full px-3 md:mb-0">
+                  <label
+                    className="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
+                    htmlFor="grid-email"
+                  >
+                    Profissão
+                  </label>
+                  <input
+                    className="mb-2 block w-full appearance-none rounded border bg-gray-200 py-2 px-2 leading-tight text-gray-700 focus:bg-white focus:outline-none"
+                    id="grid-profissao"
+                    type="profissao"
+                    placeholder="Sua profissão"
+                  />
+                </div>
+              </div>
+              <div className="-mx-3 mb-2 flex flex-wrap">
+                <div className="mb-6 w-full px-3 md:mb-0">
+                  <label
+                    htmlFor="countries"
+                    className="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
+                  >
+                    Assunto
+                  </label>
+                  <select
+                    id="assuntos"
+                    className="mb-2 block w-full appearance-none rounded border bg-gray-200 py-2 px-2 leading-tight text-gray-700 focus:bg-white focus:outline-none"
+                  >
+                    <option selected>Selecione</option>
+                    <option value="Quero ser cliente">Quero ser cliente</option>
+                    <option value="Parcerias">Parcerias</option>
+                    <option value="Dúvidas/Informações">
+                      Dúvidas/Informações sobre processos em andamento
+                    </option>
+                    <option value="Tenho interesse em acordo (Sou autor da ação)">
+                      Tenho interesse em acordo (Sou Autor(a) da ação)
+                    </option>
+                    <option value="Tenho interesse em acordo (Sou réu da ação)">
+                      Tenho interesse em acordo (Sou Réu da ação)
+                    </option>
+                    <option value="Trabalhe Conosco">Trabalhe Conosco</option>
+                    <option value="Contato Geral">Contato Geral</option>
+                  </select>
+                </div>
+              </div>
+              <div className="-mx-3 mb-2 flex flex-wrap">
+                <div className="mb-6 w-full px-3 md:mb-0">
+                  <label
+                    htmlFor="conheceu"
+                    className="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
+                  >
+                    Como nos conheceu
+                  </label>
+                  <select
+                    id="countries"
+                    className="mb-2 block w-full appearance-none rounded border bg-gray-200 py-2 px-2 leading-tight text-gray-700 focus:bg-white focus:outline-none"
+                  >
+                    <option selected>Selecione</option>
+                    <option value="Indicação">Indicação</option>
+                    <option value="Google">Google</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="LinkedIn">LinkedIn</option>
+                    <option value="Jornais">Jornais</option>
+                  </select>
                 </div>
               </div>
               <div className="-mx-3 mb-4 flex flex-wrap">
@@ -59,8 +141,8 @@ export default function Contact() {
                   <textarea
                     id="message"
                     rows="4"
-                    className="mb-2 block w-full appearance-none rounded border border-red-500 bg-gray-200 py-2 px-2 leading-tight text-gray-700 focus:bg-white focus:outline-none"
-                    placeholder="Sua Mensagem..."
+                    className="mb-2 block w-full appearance-none rounded border bg-gray-200 py-2 px-2 leading-tight text-gray-700 focus:bg-white focus:outline-none"
+                    placeholder="Sua Mensagem"
                   ></textarea>
                 </div>
               </div>
