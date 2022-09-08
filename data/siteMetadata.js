@@ -1,5 +1,5 @@
 const siteMetadata = {
-  title: 'Gabriel Funichello Advogados Associados',
+  title: 'Funichello Advogados',
   author: 'Gabriel Funichello',
   headerTitle: '',
   description: 'A blog created with Next.js and Tailwind.css',

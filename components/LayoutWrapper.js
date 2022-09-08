@@ -17,9 +17,13 @@ const LayoutWrapper = ({ children }) => {
           <div className="flex justify-center">
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">
-                <div className="mr-3">
+                <div className="mr-3 hidden sm:block">
                   {/*<Logo />*/}
                   <Image src={logo} alt="logo" width="168px" height="45px" />
+                </div>
+                <div className="mr-3 block sm:hidden">
+                  {/*<Logo />*/}
+                  <Image src={logo} alt="logo" width="117px" height="33px" />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
                   <div className="hidden h-6 text-2xl font-semibold sm:block">
@@ -37,7 +41,7 @@ const LayoutWrapper = ({ children }) => {
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="p-1 font-medium text-gray-100 dark:text-gray-100 sm:p-4"
+                  className="p-1 font-medium text-gray-100 hover:font-bold dark:text-gray-100 sm:p-4"
                 >
                   {link.title}
                 </Link>
