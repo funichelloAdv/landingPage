@@ -8,6 +8,7 @@ import { useState } from 'react'
 import Modal from 'react-modal'
 import dataMissions from '../data/missions/data.json'
 import dataExpertise from '../data/expertises/data.json'
+import useMediaQuery from '../hooks/useMediaQuery'
 
 const customStyles = {
   content: {
@@ -36,6 +37,7 @@ export default function Home() {
   const [imgIndex, setImgIndex] = useState(0)
   const [modalIsOpen, setIsOpen] = useState(false)
   const [modalContent, setModalContent] = useState()
+  const matches = useMediaQuery('(min-width:600px)')
 
   const settings = {
     infinite: false,
@@ -114,7 +116,28 @@ export default function Home() {
           width="1406px"
           height="787px"
         />
-        <div id="quem-somos" className="flex w-full flex-col justify-evenly py-20 sm:flex-row">
+        <div
+          id="quem-somos"
+          className="flex w-full flex-col justify-evenly py-20 sm:flex-row"
+          style={{ position: 'relative', height: 800 }}
+        >
+          <div
+            style={{
+              position: 'absolute',
+              right: 0,
+              left: matches ? 0 : 'inherit',
+              marginRight: matches ? 0 : 'auto',
+              marginLeft: matches ? 0 : 'auto',
+              padding: 0,
+              top: matches ? 0 : 130,
+              width: matches ? '80%' : '100%',
+              height: '100%',
+            }}
+            className="py:0 w-full px-12 sm:w-1/2"
+          >
+            <Image src={'/static/images/fog.png'} alt="fog" layout="fill" />
+          </div>
+
           <div className="flex flex-col justify-center px-8 sm:px-0">
             <div className="text-3xl">QUEM SOMOS</div>
             <div className="mt-4 -ml-36 h-1 w-56 bg-violet-500" />
@@ -124,6 +147,7 @@ export default function Home() {
               nossos clientes.
             </p>
           </div>
+
           <div className="py:0 w-full px-12 sm:w-1/2">
             <Slider {...settings}>
               {dataMissions.map((item, idx) => (
