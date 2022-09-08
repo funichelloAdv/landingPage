@@ -206,7 +206,13 @@ export default function Home() {
             ))}
           </Slider>
         </div>
-        <Image src={'/static/images/men-suit.png'} alt="home" width="1440px" height="1014px" />
+        <Image
+          className="brightness-50"
+          src={'/static/images/men-suit.png'}
+          alt="home"
+          width="1440px"
+          height="1014px"
+        />
         {/* <MapComponent /> */}
       </div>
       <Modal
