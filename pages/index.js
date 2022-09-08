@@ -156,7 +156,7 @@ export default function Home() {
         </div>
         <div
           id="areas-atuacao"
-          className="flex w-full flex-col justify-evenly bg-neutral-900 p-8 pt-16 sm:flex-row sm:p-0"
+          className="flex w-full flex-col justify-evenly bg-neutral-900 p-8 pt-16 sm:flex-row sm:p-0 sm:pt-16"
         >
           <Image src={'/static/images/expertises.png'} alt="home" width="577px" height="639px" />
           <div className="flex flex-col justify-center pt-14 sm:pt-0">
