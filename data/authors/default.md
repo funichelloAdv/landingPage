@@ -1,5 +1,5 @@
 ---
-name: Gabriel Funichello Advogados Associados
+name: Funichello Advogados
 avatar: /static/images/sua-logo.png
 occupation: Professor of Atmospheric Science
 company: Stanford University

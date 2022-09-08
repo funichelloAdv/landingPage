@@ -4,6 +4,9 @@ import 'katex/dist/katex.css'
 
 import '@fontsource/inter/variable-full.css'
 
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
 import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
 
