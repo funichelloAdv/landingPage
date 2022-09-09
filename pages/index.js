@@ -116,38 +116,17 @@ export default function Home() {
           width="1406px"
           height="787px"
         />
-        <div
-          id="quem-somos"
-          className="flex w-full flex-col justify-evenly py-20 sm:flex-row"
-          style={{ position: 'relative', height: 800 }}
-        >
-          <div
-            style={{
-              position: 'absolute',
-              right: 0,
-              left: matches ? 0 : 'inherit',
-              marginRight: matches ? 0 : 'auto',
-              marginLeft: matches ? 0 : 'auto',
-              padding: 0,
-              top: matches ? 0 : 130,
-              width: matches ? '80%' : '100%',
-              height: '100%',
-            }}
-            className="py:0 w-full px-12 sm:w-1/2"
-          >
-            <Image src={'/static/images/fog.png'} alt="fog" layout="fill" />
-          </div>
-
+        <div id="quem-somos" className="flex w-full flex-col justify-evenly py-20 sm:flex-row">
           <div className="flex flex-col justify-center px-8 sm:px-0">
-            <div className="text-3xl">QUEM SOMOS</div>
+            <div className="text-xl sm:text-3xl">QUEM SOMOS</div>
             <div className="mt-4 -ml-36 h-1 w-56 bg-violet-500" />
-            <p className="w-80 py-8 text-lg font-hairline sm:w-96">
+            <p className="text-md w-80 py-8 font-hairline sm:w-96 sm:text-lg">
               Somos um escritório estruturado com a premissa de oferecer uma{' '}
               <b>experiência diferenciada</b> e de <b>excelência</b> para defesa dos interesses de
               nossos clientes.
             </p>
           </div>
-          <div className="py:0 w-full px-12 sm:w-3/5">
+          <div className="py:0 w-full bg-[right_bottom_-7rem] bg-no-repeat px-12 sm:w-3/5 sm:bg-[url('/static/images/fog.png')] sm:py-16 2xl:bg-left">
             <Slider {...settings}>
               {dataMissions.map((item, idx) => (
                 <div key={item} className="p-2">
@@ -157,7 +136,7 @@ export default function Home() {
                         <img src={item.icon} alt="home" className="w-14" />
                       </div>
                       <p className="text-center text-lg">{item.title}</p>
-                      <p className="pt-4 text-center text-xs font-hairline sm:text-sm">
+                      <p className="self-center text-center text-xs font-hairline sm:w-11/12 sm:text-sm">
                         {item.text}
                       </p>
                     </div>
@@ -186,9 +165,9 @@ export default function Home() {
         >
           <Image src={'/static/images/expertises.png'} alt="home" width="577px" height="639px" />
           <div className="flex flex-col justify-center pt-14 sm:pt-0">
-            <div className="text-3xl">ÁREAS DE ATUAÇÃO</div>
+            <div className="text-xl sm:text-3xl">ÁREAS DE ATUAÇÃO</div>
             <div className="mt-4 h-1 w-20 bg-violet-500" />
-            <p className="w-80 py-8 text-lg font-hairline sm:w-96">
+            <p className="text-md w-80 py-8 font-hairline sm:w-96 sm:text-lg">
               Nossa missão é defender, de forma <b>estratégica</b> e <b>inovadora</b>, os direitos
               de todos que confiam seus interesses em nossas mãos, atuando com{' '}
               <b>eficiência, compromisso</b> e <b>determinação</b> em todas as nossas entregas.
@@ -207,7 +186,7 @@ export default function Home() {
                     boxShadow: 'inset 0 0 5em black',
                   }}
                 >
-                  <div className="flex h-36 w-32 flex-col justify-center bg-[url('/static/images/rounded-card.png')] bg-no-repeat">
+                  <div className="t flex h-36 w-32 flex-col justify-center bg-[url('/static/images/rounded-card.png')]">
                     <div className="self-center">
                       <img src={item.icon} alt="home" className="ml-4 w-10" />
                     </div>
