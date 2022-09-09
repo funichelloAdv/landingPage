@@ -8,7 +8,6 @@ import { useState } from 'react'
 import Modal from 'react-modal'
 import dataMissions from '../data/missions/data.json'
 import dataExpertise from '../data/expertises/data.json'
-import useMediaQuery from '../hooks/useMediaQuery'
 
 const customStyles = {
   content: {
@@ -37,7 +36,6 @@ export default function Home() {
   const [imgIndex, setImgIndex] = useState(0)
   const [modalIsOpen, setIsOpen] = useState(false)
   const [modalContent, setModalContent] = useState()
-  const matches = useMediaQuery('(min-width:600px)')
 
   const settings = {
     infinite: false,
