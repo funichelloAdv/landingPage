@@ -147,32 +147,34 @@ export default function Home() {
               nossos clientes.
             </p>
           </div>
-
-          <div className="py:0 w-full px-12 sm:w-1/2">
+          <div className="py:0 w-full px-12 sm:w-3/5">
             <Slider {...settings}>
               {dataMissions.map((item, idx) => (
-                <div key={item} className="flex h-80 flex-col justify-center pt-20">
-                  <div
-                    className={
-                      idx - 1 === imgIndex
-                        ? 'sm:h-46 sm:w-74 rounded-md bg-neutral-900 sm:-mt-12'
-                        : 'mx-4 rounded-md bg-neutral-900'
-                    }
-                  >
-                    <div className="mx-28 pt-8 sm:mx-14">
-                      <Image src={item.icon} alt="home" width="61px" height="61px" />
+                <div key={item} className="p-2">
+                  {idx - 1 === imgIndex ? (
+                    <div className="flex h-60 flex-col justify-center bg-neutral-900">
+                      <div className="self-center">
+                        <img src={item.icon} alt="home" className="w-14" />
+                      </div>
+                      <p className="text-center text-lg">{item.title}</p>
+                      <p className="pt-4 text-center text-xs font-hairline sm:text-sm">
+                        {item.text}
+                      </p>
                     </div>
-                    <p
-                      className={
-                        idx - 1 === imgIndex
-                          ? 'text-md text-center font-semibold'
-                          : 'text-sm3 text-center'
-                      }
+                  ) : (
+                    <div
+                      key={item}
+                      className="flex h-60 flex-col justify-center bg-neutral-900 sm:mt-8 sm:h-44"
                     >
-                      {item.title}
-                    </p>
-                    <p className="p-4 pb-4 text-center text-xs font-hairline">{item.text}</p>
-                  </div>
+                      <div className="self-center">
+                        <img src={item.icon} alt="home" className="w-14 sm:w-12" />
+                      </div>
+                      <p className="text-center text-lg sm:text-sm">{item.title}</p>
+                      <p className="w-4/5 self-center pt-4 text-center text-xs font-hairline sm:w-full sm:px-4 sm:pt-2">
+                        {item.text}
+                      </p>
+                    </div>
+                  )}
                 </div>
               ))}
             </Slider>
@@ -180,7 +182,7 @@ export default function Home() {
         </div>
         <div
           id="areas-atuacao"
-          className="flex w-full flex-col justify-evenly bg-neutral-900 p-8 pt-16 sm:flex-row sm:p-0"
+          className="flex w-full flex-col justify-evenly bg-neutral-900 p-8 pt-16 sm:flex-row sm:p-0 sm:pt-16"
         >
           <Image src={'/static/images/expertises.png'} alt="home" width="577px" height="639px" />
           <div className="flex flex-col justify-center pt-14 sm:pt-0">
@@ -230,7 +232,13 @@ export default function Home() {
             ))}
           </Slider>
         </div>
-        <Image src={'/static/images/men-suit.png'} alt="home" width="1440px" height="1014px" />
+        <Image
+          className="brightness-50"
+          src={'/static/images/men-suit.png'}
+          alt="home"
+          width="1440px"
+          height="1014px"
+        />
         {/* <MapComponent /> */}
       </div>
       <Modal

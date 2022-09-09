@@ -1,17 +1,27 @@
 [
   {
     "icon": "/static/images/missions/1.png",
-    "title": "DETERMINAÇÃO",
-    "text": ""
+    "title": "INOVAÇÃO",
+    "text": " Desafiamos o pensamento tradicional e criamos respostas únicas e inovadoras para os problemas dos nossos clientes. "
   },
   {
     "icon": "/static/images/missions/2.png",
+    "title": "COMPROMISSO",
+    "text": " Construímos relacionamentos longos e duradouros com nossos parceiros, pautados na confiança e colaboração."
+  },
+  {
+    "icon": "/static/images/missions/3.png",
     "title": "EFICIÊNCIA",
     "text": "Agimos com rapidez e dinamismo para encontrar soluções que superem as expectativas de nossos clientes."
   },
   {
-    "icon": "/static/images/missions/1.png",
+    "icon": "/static/images/missions/4.png",
     "title": "DETERMINAÇÃO",
-    "text": ""
+    "text": "Perseguimos com empenho ao que nos comprometemos. Temos senso de urgência e disciplina para entregar resultados com excelência. "
+  },
+  {
+    "icon": "/static/images/missions/5.png",
+    "title": "VISÃO",
+    "text": "Nos dedicamos ao presente com lentes para o futuro. Estamos constantemente nos reinventando e evoluindo nossas soluções."
   }
 ]

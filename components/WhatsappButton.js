@@ -8,6 +8,7 @@ export default function WhatsappButton() {
       statusMessage=""
       chatMessage="Olá, como podemos te ajudar hoje?"
       placeholder="Escreva uma mensagem..."
+      avatar="/static/images/logo-adv-menor.png"
     />
   )
 }

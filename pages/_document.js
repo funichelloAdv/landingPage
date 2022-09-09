@@ -18,7 +18,7 @@ class MyDocument extends Document {
             href="/static/images/logo-adv-menor.png"
           />
           <link rel="manifest" href="/static/favicons/site.webmanifest" />
-          <link rel="mask-icon" href="/static/images/sua-logo.png" color="#5bbad5" />
+          <link rel="mask-icon" href="/static/images/logo-adv-menor.png" color="#5bbad5" />
           <meta name="msapplication-TileColor" content="#000000" />
           <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
           <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
