@@ -8,6 +8,17 @@ import { useState } from 'react'
 import Modal from 'react-modal'
 import dataMissions from '../data/missions/data.json'
 import dataExpertise from '../data/expertises/data.json'
+import Trabalhista from '@/data/expertises/details/Trabalhista'
+import Civil from '@/data/expertises/details/Civil'
+import Tributario from '@/data/expertises/details/Tributário'
+import FamiliaSucessoes from '@/data/expertises/details/FamiliaSucessoes'
+import Agronegocio from '@/data/expertises/details/Agronegocio'
+import DireitoDigital from '@/data/expertises/details/DireitoDigital'
+import DireitoMedico from '@/data/expertises/details/DireitoMedico'
+import Empresarial from '@/data/expertises/details/Empresarial'
+import Imobiliario from '@/data/expertises/details/Imobiliario'
+import RecuperacaoJudicial from '@/data/expertises/details/RecuperacaoJudicial'
+import Societario from '@/data/expertises/details/Societario'
 
 const customStyles = {
   content: {
@@ -30,12 +41,28 @@ const customStyles = {
   },
 }
 
+const detailsComponents = {
+  Societario: Societario,
+  Civil: Civil,
+  Trabalhista: Trabalhista,
+  Tributario: Tributario,
+  FamiliaSucessoes: FamiliaSucessoes,
+  Agronegocio: Agronegocio,
+  DireitoDigital: DireitoDigital,
+  DireitoMedico: DireitoMedico,
+  Empresarial: Empresarial,
+  Imobiliario: Imobiliario,
+  RecuperacaoJudicial: RecuperacaoJudicial,
+}
 // const MapComponent = dynamic(() => import('../components/MapComponent'), { ssr: false })
 
 export default function Home() {
   const [imgIndex, setImgIndex] = useState(0)
   const [modalIsOpen, setIsOpen] = useState(false)
   const [modalContent, setModalContent] = useState()
+
+  const Details =
+    modalContent && modalContent?.detail ? detailsComponents[modalContent?.detail] : Civil
 
   const settings = {
     infinite: false,
@@ -233,7 +260,7 @@ export default function Home() {
         >
           <div className="px-8 pb-4">
             <div className="text-white-300 mb-2 text-xl">{modalContent?.title}</div>
-            <p className="w-46 py-4 text-sm font-hairline">{modalContent?.text}</p>
+            <Details />
           </div>
         </div>
       </Modal>

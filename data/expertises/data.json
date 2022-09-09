@@ -2,56 +2,67 @@
   {
     "icon": "/static/images/expertises/1.png",
     "title": "CIVIL",
-    "text": "O FA conta com robusta experiência no contencioso estratégico, com atuação na defesa de nossos clientes perante órgãos judiciais e administrativos em todas as esferas e instâncias. Auxiliamos no planejamento e execução de estratégias processuais e materiais, avaliando a possibilidade e conveniência de solução consensual para os litígios, acompanhando e analisando constantemente os desdobramentos de cada processo e suas repercussões para as posições dos clientes;"
+    "text": "O FA conta com robusta experiência no contencioso estratégico, com atuação na defesa de nossos clientes perante órgãos judiciais e administrativos em todas as esferas e instâncias. Auxiliamos no planejamento e execução de estratégias processuais e materiais, avaliando a possibilidade e conveniência de solução consensual para os litígios, acompanhando e analisando constantemente os desdobramentos de cada processo e suas repercussões para as posições dos clientes;",
+    "detail": "Civil"
   },
   {
     "icon": "/static/images/expertises/2.png",
     "title": "TRABALHISTA",
-    "text": "O direito do trabalho na sociedade contemporânea evolui constantemente, o que requer atento acompanhamento e a busca por soluções assertivas. O FA atua por meio de consultoria e análise preventiva em assuntos envolvendo toda e qualquer relação de trabalho. Promovemos ainda assessoria e consultoria na análise e preparação de contratos para terceirização das mais variadas atividades empresariais e parcerias trabalhistas/empresariais."
+    "text": "O direito do trabalho na sociedade contemporânea evolui constantemente, o que requer atento acompanhamento e a busca por soluções assertivas. O FA atua por meio de consultoria e análise preventiva em assuntos envolvendo toda e qualquer relação de trabalho. Promovemos ainda assessoria e consultoria na análise e preparação de contratos para terceirização das mais variadas atividades empresariais e parcerias trabalhistas/empresariais.",
+    "detail": "Trabalhista"
   },
   {
     "icon": "/static/images/expertises/3.png",
     "title": "TRIBUTÁRIO",
-    "text": "A atuação do FA auxilia empresas na resolução das mais diversas questões, sejam elas consultivas ou contenciosas, administrativas ou judiciais. Proporcionamos a nossos clientes a visão de todas as alternativas, benefícios e eventuais riscos envolvidos em cada caso, agregando informações relevantes no momento da tomada de decisão dos departamentos jurídicos e tributários, ou dos executivos das empresas."
+    "text": "A atuação do FA auxilia empresas na resolução das mais diversas questões, sejam elas consultivas ou contenciosas, administrativas ou judiciais. Proporcionamos a nossos clientes a visão de todas as alternativas, benefícios e eventuais riscos envolvidos em cada caso, agregando informações relevantes no momento da tomada de decisão dos departamentos jurídicos e tributários, ou dos executivos das empresas.",
+    "detail": "Tributario"
   },
   {
     "icon": "/static/images/expertises/4.png",
     "title": "EMPRESARIAL",
-    "text": "Funichello Advogados atua na prestação de assessoria e consultoria jurídica a pequenas, médias e grandes empresas, de quaisquer setores, bem como a empresários e a investidores, mediante a análise e planejamento."
+    "text": "Funichello Advogados atua na prestação de assessoria e consultoria jurídica a pequenas, médias e grandes empresas, de quaisquer setores, bem como a empresários e a investidores, mediante a análise e planejamento.",
+    "detail": "Empresarial"
   },
   {
     "icon": "/static/images/expertises/5.png",
     "title": "RECUPERAÇÃO JUDICIAL E FALÊNCIA",
-    "text": "Atuamos em todas as etapas de processos de recuperação empresarial, recuperação judicial e falência, orientando nossos clientes, acompanhando e praticando todos os atos necessários em todas e quaisquer instâncias."
+    "text": "Atuamos em todas as etapas de processos de recuperação empresarial, recuperação judicial e falência, orientando nossos clientes, acompanhando e praticando todos os atos necessários em todas e quaisquer instâncias.",
+    "detail": "RecuperacaoJudicial"
   },
   {
     "icon": "/static/images/expertises/6.png",
     "title": "SOCIETÁRIO E M&A",
-    "text": "O FA na prática de Societário assessora empresas durante todo o ciclo de vida de seus negócios. Assessoramos e estruturamos juridicamente operações de compra e venda de empresas, aquisições privadas e reorganizações societárias. Com uma abordagem multidisciplinar, oferecemos um atendimento completo e eficiente por meio de soluções especializadas e inovadoras."
+    "text": "O FA na prática de Societário assessora empresas durante todo o ciclo de vida de seus negócios. Assessoramos e estruturamos juridicamente operações de compra e venda de empresas, aquisições privadas e reorganizações societárias. Com uma abordagem multidisciplinar, oferecemos um atendimento completo e eficiente por meio de soluções especializadas e inovadoras.",
+    "detail": "Societario"
   },
   {
     "icon": "/static/images/expertises/7.png",
     "title": "IMOBILIÁRIO",
-    "text": "Atuamos em todos os tipos de negócios imobiliários, dos mais simples aos mais complexos, sejam operações típicas do setor, como contratos de compra e venda, locação, hipotecas e alienação ﬁduciária, ou negócios mais complexos, como o desenvolvimento de projetos imobiliários e de urbanização, loteamentos, incorporações e built to suit."
+    "text": "Atuamos em todos os tipos de negócios imobiliários, dos mais simples aos mais complexos, sejam operações típicas do setor, como contratos de compra e venda, locação, hipotecas e alienação ﬁduciária, ou negócios mais complexos, como o desenvolvimento de projetos imobiliários e de urbanização, loteamentos, incorporações e built to suit.",
+    "detail": "Imobiliario"
   },
   {
     "icon": "/static/images/expertises/8.png",
     "title": "AGRONEGÓCIO",
-    "text": "Atuamos no assessoramento a pessoas físicas e jurídicas em uma ampla variedade de temas relacionados à atividade agrícola, como nas áreas tributária, imobiliária, trabalhista e ambiental, entre outras."
+    "text": "Atuamos no assessoramento a pessoas físicas e jurídicas em uma ampla variedade de temas relacionados à atividade agrícola, como nas áreas tributária, imobiliária, trabalhista e ambiental, entre outras.",
+    "detail": "Agronegocio"
   },
   {
     "icon": "/static/images/expertises/9.png",
     "title": "DIREITO DIGITAL E PROTEÇÃO DE DADOS",
-    "text": "Apoiamos nossos clientes na adequação às normas legais que regulam privacidade e proteção de dados pessoais, o que inclui a Lei Geral de Proteção de Dados – LGPD e também regulações setoriais aplicáveis a ramos específicos de mercado. Através de um trabalho multidisciplinar, buscamos não só auxiliar nossos clientes na conformidade de suas atividades de modo geral, mas também buscar soluções jurídicas personalizadas para viabilizar produtos e serviços inovadores impulsionados por dados."
+    "text": "Apoiamos nossos clientes na adequação às normas legais que regulam privacidade e proteção de dados pessoais, o que inclui a Lei Geral de Proteção de Dados – LGPD e também regulações setoriais aplicáveis a ramos específicos de mercado. Através de um trabalho multidisciplinar, buscamos não só auxiliar nossos clientes na conformidade de suas atividades de modo geral, mas também buscar soluções jurídicas personalizadas para viabilizar produtos e serviços inovadores impulsionados por dados.",
+    "detail": "DireitoDigital"
   },
   {
     "icon": "/static/images/expertises/10.png",
     "title": "DIREITO MÉDICO",
-    "text": "O FA possui amplo know how no segmento, atuando tanto na defesa de pacientes através de ações de indenização por erro médico, bem como na defesa jurídica de médicos, dentistas, profissionais e estabelecimentos de saúde em processos de natureza cível, administrativa e penal decorrentes dos atos praticados no exercício de suas funções."
+    "text": "O FA possui amplo know how no segmento, atuando tanto na defesa de pacientes através de ações de indenização por erro médico, bem como na defesa jurídica de médicos, dentistas, profissionais e estabelecimentos de saúde em processos de natureza cível, administrativa e penal decorrentes dos atos praticados no exercício de suas funções.",
+    "detail": "DireitoMedico"
   },
   {
     "icon": "/static/images/expertises/11.png",
     "title": "FAMÍLIA E SUCESSÕES",
-    "text": "A atuação do FA em Direito de Família e Sucessões, envolve tanto a esfera judicial quanto a extrajudicial, com a finalidade de alcançar soluções de modo consensual, visando a prevenção e a resolução dos conflitos familiares."
+    "text": "A atuação do FA em Direito de Família e Sucessões, envolve tanto a esfera judicial quanto a extrajudicial, com a finalidade de alcançar soluções de modo consensual, visando a prevenção e a resolução dos conflitos familiares.",
+    "detail": "FamiliaSucessoes"
   }
 ]
