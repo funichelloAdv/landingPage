@@ -21,7 +21,7 @@ class MyDocument extends Document {
           <link rel="mask-icon" href="/static/images/logo-adv-menor.png" color="#5bbad5" />
           <meta name="msapplication-TileColor" content="#000000" />
           <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
-          <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
+          <meta name="theme-color" media="(prefers-color-scheme: light)" content="#000" />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
         </Head>
         <body className="bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
