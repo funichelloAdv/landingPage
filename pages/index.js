@@ -8,7 +8,17 @@ import { useState } from 'react'
 import Modal from 'react-modal'
 import dataMissions from '../data/missions/data.json'
 import dataExpertise from '../data/expertises/data.json'
-import useMediaQuery from '../hooks/useMediaQuery'
+import Trabalhista from '@/data/expertises/details/Trabalhista'
+import Civil from '@/data/expertises/details/Civil'
+import Tributario from '@/data/expertises/details/Tributário'
+import FamiliaSucessoes from '@/data/expertises/details/FamiliaSucessoes'
+import Agronegocio from '@/data/expertises/details/Agronegocio'
+import DireitoDigital from '@/data/expertises/details/DireitoDigital'
+import DireitoMedico from '@/data/expertises/details/DireitoMedico'
+import Empresarial from '@/data/expertises/details/Empresarial'
+import Imobiliario from '@/data/expertises/details/Imobiliario'
+import RecuperacaoJudicial from '@/data/expertises/details/RecuperacaoJudicial'
+import Societario from '@/data/expertises/details/Societario'
 
 const customStyles = {
   content: {
@@ -20,6 +30,7 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
     backgroundColor: 'transparent',
     border: '0px',
+    maxHeight: '70%',
   },
   overlay: {
     position: 'fixed',
@@ -31,13 +42,28 @@ const customStyles = {
   },
 }
 
+const detailsComponents = {
+  Societario: Societario,
+  Civil: Civil,
+  Trabalhista: Trabalhista,
+  Tributario: Tributario,
+  FamiliaSucessoes: FamiliaSucessoes,
+  Agronegocio: Agronegocio,
+  DireitoDigital: DireitoDigital,
+  DireitoMedico: DireitoMedico,
+  Empresarial: Empresarial,
+  Imobiliario: Imobiliario,
+  RecuperacaoJudicial: RecuperacaoJudicial,
+}
 // const MapComponent = dynamic(() => import('../components/MapComponent'), { ssr: false })
 
 export default function Home() {
   const [imgIndex, setImgIndex] = useState(0)
   const [modalIsOpen, setIsOpen] = useState(false)
   const [modalContent, setModalContent] = useState()
-  const matches = useMediaQuery('(min-width:600px)')
+
+  const Details =
+    modalContent && modalContent?.detail ? detailsComponents[modalContent?.detail] : Civil
 
   const settings = {
     infinite: false,
@@ -111,22 +137,31 @@ export default function Home() {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="flex flex-col items-center justify-center">
         <Image
-          src={'/static/images/corporate-building.png'}
+          src={'/static/images/corporate-building.jpg'}
           alt="home"
-          width="1406px"
-          height="787px"
+          width="5728px"
+          height="2399px"
         />
-        <div id="quem-somos" className="flex w-full flex-col justify-evenly py-20 sm:flex-row">
+        <div id="nossa-missao" className="flex w-full flex-col justify-evenly py-20 sm:flex-row">
           <div className="flex flex-col justify-center px-8 sm:px-0">
-            <div className="text-xl sm:text-3xl">QUEM SOMOS</div>
-            <div className="mt-4 -ml-36 h-1 w-56 bg-violet-500" />
-            <p className="text-md w-80 py-8 font-hairline sm:w-96 sm:text-lg">
+            <div className="text-center text-xl sm:text-left sm:text-3xl">NOSSA MISSÃO</div>
+            <div className="mt-4 -ml-36 hidden h-1 w-56 bg-violet-500 sm:block" />
+            <p className="text-md w-full py-8 text-center font-hairline sm:w-80 sm:w-96 sm:text-left sm:text-lg">
               Somos um escritório estruturado com a premissa de oferecer uma{' '}
               <b>experiência diferenciada</b> e de <b>excelência</b> para defesa dos interesses de
               nossos clientes.
             </p>
           </div>
-          <div className="py:0 w-full bg-[right_bottom_-7rem] bg-no-repeat px-12 sm:w-3/5 sm:bg-[url('/static/images/fog.png')] sm:py-16 2xl:bg-left">
+          <div className="block pb-8 text-center text-xl font-light text-gray-500 sm:hidden sm:text-left sm:text-3xl">
+            NOSSOS <b>VALORES</b>
+          </div>
+          <div
+            className="py:0 w-full bg-[right_bottom_-7rem] bg-no-repeat px-12 sm:w-3/5 sm:bg-[url('/static/images/fog.png')] sm:py-16 2xl:bg-left"
+            style={{
+              backgroundColor: '#000',
+              boxShadow: 'inset 0 0 10em black',
+            }}
+          >
             <Slider {...settings}>
               {dataMissions.map((item, idx) => (
                 <div key={item} className="p-2">
@@ -163,8 +198,15 @@ export default function Home() {
           id="areas-atuacao"
           className="flex w-full flex-col justify-evenly bg-neutral-900 p-8 pt-16 sm:flex-row sm:p-0 sm:pt-16"
         >
-          <Image src={'/static/images/expertises.png'} alt="home" width="577px" height="639px" />
-          <div className="flex flex-col justify-center pt-14 sm:pt-0">
+          <div className="w-full sm:w-1/2">
+            <Image
+              src={'/static/images/expertises.png'}
+              alt="home"
+              width="2308px"
+              height="2566px"
+            />
+          </div>
+          <div className=" flex flex-col justify-center pt-14 sm:pt-0">
             <div className="text-xl sm:text-3xl">ÁREAS DE ATUAÇÃO</div>
             <div className="mt-4 h-1 w-20 bg-violet-500" />
             <p className="text-md w-80 py-8 font-hairline sm:w-96 sm:text-lg">
@@ -235,7 +277,7 @@ export default function Home() {
         >
           <div className="px-8 pb-4">
             <div className="text-white-300 mb-2 text-xl">{modalContent?.title}</div>
-            <p className="w-46 py-4 text-sm font-hairline">{modalContent?.text}</p>
+            <Details />
           </div>
         </div>
       </Modal>

@@ -1,6 +1,6 @@
 const headerNavLinks = [
   { href: '/', title: 'Home' },
-  { href: '#quem-somos', title: 'Quem somos' },
+  { href: '#nossa-missao', title: 'Nossa Missão' },
   /*{ href: '/blog', title: 'Blog' },*/
   /*{ href: '/tags', title: 'Tags' },*/
   { href: '#areas-atuacao', title: 'Áreas de atuação' },
