@@ -147,9 +147,9 @@ export default function Home() {
             <div className="text-center text-xl sm:text-left sm:text-3xl">NOSSA MISSÃO</div>
             <div className="mt-4 -ml-36 hidden h-1 w-56 bg-violet-500 sm:block" />
             <p className="text-md w-full py-8 text-center font-hairline sm:w-80 sm:w-96 sm:text-left sm:text-lg">
-              Somos um escritório estruturado com a premissa de oferecer uma{' '}
-              <b>experiência diferenciada</b> e de <b>excelência</b> para defesa dos interesses de
-              nossos clientes.
+              Nossa missão é defender, de forma <b>estratégica</b> e <b>inovadora</b>, os direitos
+              de todos que confiam seus interesses em nossas mãos, atuando com{' '}
+              <b>eficiência, compromisso</b> e <b>determinação</b> em todas as nossas entregas.
             </p>
           </div>
           <div className="block pb-8 text-center text-xl font-light text-gray-500 sm:hidden sm:text-left sm:text-3xl">
@@ -210,9 +210,9 @@ export default function Home() {
             <div className="text-xl sm:text-3xl">ÁREAS DE ATUAÇÃO</div>
             <div className="mt-4 h-1 w-20 bg-violet-500" />
             <p className="text-md w-80 py-8 font-hairline sm:w-96 sm:text-lg">
-              Nossa missão é defender, de forma <b>estratégica</b> e <b>inovadora</b>, os direitos
-              de todos que confiam seus interesses em nossas mãos, atuando com{' '}
-              <b>eficiência, compromisso</b> e <b>determinação</b> em todas as nossas entregas.
+              Somos um escritório estruturado com a premissa de oferecer uma{' '}
+              <b>experiência diferenciada</b> e de <b>excelência</b> para defesa dos interesses de
+              nossos clientes.
             </p>
           </div>
         </div>
