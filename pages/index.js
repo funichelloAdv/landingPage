@@ -1,5 +1,3 @@
-import Link from '@/components/Link'
-import dynamic from 'next/dynamic'
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import Image from 'next/image'
@@ -136,12 +134,31 @@ export default function Home() {
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="flex flex-col items-center justify-center">
-        <Image
-          src={'/static/images/corporate-building.jpg'}
-          alt="home"
-          width="5728px"
-          height="2399px"
-        />
+        <div className="block sm:hidden">
+          <Image
+            src="/static/images/corporate-building2.jpg"
+            alt="Corporate building"
+            width="5728"
+            height="2399"
+          />
+        </div>
+        <div className="relative hidden h-screen w-full sm:block">
+          <Image
+            src="/static/images/corporate-building.png"
+            alt="Corporate building"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+          />
+          <div className="absolute top-0 left-0 h-full w-full bg-black bg-opacity-50" />
+          <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center">
+            <p className="ont-hairline w-4/5 text-center text-2xl text-white drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)]">
+              Somos um escritório <b>Full Service</b> com expertise em diversas áreas de atuação,
+              trabalhando com <b>equipes especializadas e multidisciplinares</b>, integradas por
+              princípios sólidos e eficazes na busca dos interesses dos nossos clientes.
+            </p>
+          </div>
+        </div>
         <div id="nossa-missao" className="flex w-full flex-col justify-evenly py-20 sm:flex-row">
           <div className="flex flex-col justify-center px-8 sm:px-0">
             <div className="text-center text-xl sm:text-left sm:text-3xl">NOSSA MISSÃO</div>
@@ -255,7 +272,7 @@ export default function Home() {
         </div>
         <Image
           className="brightness-50"
-          src={'/static/images/men-suit.png'}
+          src={'/static/images/balança.png'}
           alt="home"
           width="1440px"
           height="1014px"
