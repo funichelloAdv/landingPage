@@ -272,7 +272,7 @@ export default function Home() {
         </div>
         <Image
           className="brightness-50"
-          src={'/static/images/balança.png'}
+          src={'/static/images/balanca.png'}
           alt="home"
           width="1440px"
           height="1014px"
