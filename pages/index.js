@@ -152,7 +152,7 @@ export default function Home() {
           />
           <div className="absolute top-0 left-0 h-full w-full bg-black bg-opacity-50" />
           <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center">
-            <p className="ont-hairline w-4/5 text-center text-2xl text-white drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)]">
+            <p className="w-4/5 text-center text-2xl font-hairline text-white drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)]">
               Somos um escritório <b>Full Service</b> com expertise em diversas áreas de atuação,
               trabalhando com <b>equipes especializadas e multidisciplinares</b>, integradas por
               princípios sólidos e eficazes na busca dos interesses dos nossos clientes.
@@ -163,7 +163,7 @@ export default function Home() {
           <div className="flex flex-col justify-center px-8 sm:px-0">
             <div className="text-center text-xl sm:text-left sm:text-3xl">NOSSA MISSÃO</div>
             <div className="mt-4 -ml-36 hidden h-1 w-56 bg-violet-500 sm:block" />
-            <p className="text-md w-full py-8 text-center font-hairline sm:w-80 sm:w-96 sm:text-left sm:text-lg">
+            <p className="text-md w-full py-8 text-center font-hairline sm:w-80 sm:text-left sm:text-lg">
               Nossa missão é defender, de forma <b>estratégica</b> e <b>inovadora</b>, os direitos
               de todos que confiam seus interesses em nossas mãos, atuando com{' '}
               <b>eficiência, compromisso</b> e <b>determinação</b> em todas as nossas entregas.
@@ -269,6 +269,115 @@ export default function Home() {
               </div>
             ))}
           </Slider>
+        </div>
+        <div className="my-16 divide-y divide-violet-500">
+          <div className="mb-4">
+            <h1 className="tracking-light text-white-300 text-center text-3xl leading-9 sm:text-xl sm:leading-10 md:text-4xl md:leading-14">
+              Contato
+            </h1>
+            <p className="text-center font-light text-gray-300">
+              Entre em contato conosco e tire suas dúvidas.
+            </p>
+          </div>
+          <div>
+            <div className="md:flex-column flex flex-col items-start justify-start md:items-center md:justify-center md:space-x-6">
+              <form className="mt-8 w-full max-w-lg">
+                <div className="-mx-3 mb-2 flex flex-wrap">
+                  <div className="mb-0 w-full px-3">
+                    <input
+                      className="mb-2 block w-full appearance-none rounded border bg-transparent py-2 px-2 leading-tight text-gray-700 focus:bg-white focus:outline-none"
+                      id="grid-name"
+                      type="text"
+                      placeholder="Nome"
+                    />
+                  </div>
+                </div>
+                <div className="-mx-3 mb-2 flex flex-wrap">
+                  <div className="mb-0 w-full px-3">
+                    <input
+                      className="mb-2 block w-full appearance-none rounded border bg-transparent py-2 px-2 leading-tight text-gray-700 focus:bg-white focus:outline-none"
+                      id="grid-name"
+                      type="text"
+                      placeholder="Telefone"
+                    />
+                  </div>
+                </div>
+                <div className="-mx-3 mb-2 flex flex-wrap">
+                  <div className="mb-0 w-full px-3">
+                    <input
+                      className="mb-2 block w-full appearance-none rounded border bg-transparent py-2 px-2 leading-tight text-gray-700 focus:bg-white focus:outline-none"
+                      id="grid-name"
+                      type="text"
+                      placeholder="E-mail"
+                    />
+                  </div>
+                </div>
+                <div className="-mx-3 mb-2 flex flex-wrap">
+                  <div className="mb-0 w-full px-3">
+                    <input
+                      className="mb-2 block w-full appearance-none rounded border bg-transparent py-2 px-2 leading-tight text-gray-700 focus:bg-white focus:outline-none"
+                      id="grid-name"
+                      type="text"
+                      placeholder="Profissão"
+                    />
+                  </div>
+                </div>
+                <div className="-mx-3 mb-2 flex flex-wrap">
+                  <div className="mb-0 w-full px-3">
+                    <select
+                      id="assuntos"
+                      className="mb-2 block w-full appearance-none rounded border bg-transparent py-2 px-2 leading-tight text-gray-500 outline-none focus:bg-white"
+                    >
+                      <option selected>Qual o motivo do contato?</option>
+                      <option value="Quero ser cliente">Quero ser cliente</option>
+                      <option value="Parcerias">Parcerias</option>
+                      <option value="Dúvidas/Informações">
+                        Dúvidas/Informações sobre processos em andamento
+                      </option>
+                      <option value="Tenho interesse em acordo (Sou autor da ação)">
+                        Tenho interesse em acordo (Sou Autor(a) da ação)
+                      </option>
+                      <option value="Tenho interesse em acordo (Sou réu da ação)">
+                        Tenho interesse em acordo (Sou Réu da ação)
+                      </option>
+                      <option value="Trabalhe Conosco">Trabalhe Conosco</option>
+                      <option value="Contato Geral">Contato Geral</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="-mx-3 mb-2 flex flex-wrap">
+                  <div className="mb-0 w-full px-3">
+                    <select
+                      id="countries"
+                      className="mb-2 block w-full appearance-none rounded border bg-transparent py-2 px-2 leading-tight text-gray-500 focus:bg-white focus:outline-none"
+                    >
+                      <option selected>Como nos conheceu?</option>
+                      <option value="Indicação">Indicação</option>
+                      <option value="Google">Google</option>
+                      <option value="Instagram">Instagram</option>
+                      <option value="LinkedIn">LinkedIn</option>
+                      <option value="Jornais">Jornais</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="-mx-3 mb-4 flex flex-wrap">
+                  <div className="mb-0 w-full px-3">
+                    <textarea
+                      id="message"
+                      rows="4"
+                      className="mb-2 block w-full appearance-none rounded border bg-transparent py-2 px-2 leading-tight text-gray-700 focus:bg-white focus:outline-none"
+                      placeholder="Mensagem"
+                    ></textarea>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center">
+                  <button className="rounded border border-gray-400 bg-transparent py-2 px-4 font-semibold text-gray-400 hover:border-transparent hover:bg-violet-500 hover:text-white">
+                    Enviar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
         <Image
           className="brightness-50"
