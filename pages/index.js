@@ -339,7 +339,7 @@ export default function Home() {
             ))}
           </Slider>
         </div>
-        <div id="contact" className="my-16 divide-y divide-violet-500">
+        <div id="contact" className="my-16 divide-y divide-violet-500 px-8 sm:px-0">
           <div className="mb-4">
             <h1 className="tracking-light text-white-300 text-center text-3xl leading-9 sm:text-xl sm:leading-10 md:text-4xl md:leading-14">
               Contato

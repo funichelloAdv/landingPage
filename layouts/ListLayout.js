@@ -1,7 +1,7 @@
-import Link from '@/components/Link'
 import { useState } from 'react'
 import formatDate from '@/lib/utils/formatDate'
 import PostLayout from './PostLayout'
+import Link from 'next/link'
 
 export default function ListLayout({ posts }) {
   const [searchValue, setSearchValue] = useState('')
@@ -59,16 +59,12 @@ export default function ListLayout({ posts }) {
                         <div>
                           <h3 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link
-                              onClick={() => {
-                                if (post.link) {
-                                  window.open(post.link, '_blank')
-                                } else {
-                                  setPostSelected(post)
-                                }
-                              }}
+                              href={!post.link ? `/blog/article/${post.id}` : post.link}
                               className="text-gray-900 dark:text-gray-100"
                             >
-                              {post.title}
+                              <a target="_blank" rel="noopener noreferrer">
+                                {post.title}
+                              </a>
                             </Link>
                           </h3>
                           <p className="text-gray-500">{post.subtitle}</p>
