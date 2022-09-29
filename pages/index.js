@@ -59,6 +59,13 @@ export default function Home() {
   const [imgIndex, setImgIndex] = useState(0)
   const [modalIsOpen, setIsOpen] = useState(false)
   const [modalContent, setModalContent] = useState()
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const [message, setMessage] = useState('')
+  const [profession, setProfession] = useState('')
+  const [subject, setSubject] = useState('')
+  const [type, setType] = useState('')
 
   const Details =
     modalContent && modalContent?.detail ? detailsComponents[modalContent?.detail] : Civil
@@ -128,6 +135,35 @@ export default function Home() {
         },
       },
     ],
+  }
+
+  const handleSubmit = async () => {
+    if (name && email && phone && message && profession && subject && type) {
+      const data = {
+        name,
+        email,
+        phone,
+        message,
+        subject,
+        profession,
+        type,
+      }
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+      const result = await response.json()
+      if (result.success) {
+        alert('Mensagem enviada com sucesso!')
+      } else {
+        alert('Erro ao enviar mensagem!')
+      }
+    } else {
+      alert('Preencha todos os campos!')
+    }
   }
 
   return (
@@ -270,7 +306,7 @@ export default function Home() {
             ))}
           </Slider>
         </div>
-        <div className="my-16 divide-y divide-violet-500">
+        <div id="contact" className="my-16 divide-y divide-violet-500">
           <div className="mb-4">
             <h1 className="tracking-light text-white-300 text-center text-3xl leading-9 sm:text-xl sm:leading-10 md:text-4xl md:leading-14">
               Contato
