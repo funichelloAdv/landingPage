@@ -47,8 +47,8 @@ export default function ListLayout({ posts }) {
               .filter((post) => post.title.toLowerCase().includes(searchValue.toLowerCase()))
               .map((post) => {
                 return (
-                  <li key={post.id} className="py-4">
-                    <article className="xl:posts-baseline space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0">
+                  <li key={post.id} className="cursor-pointer py-4">
+                    <article className="xl:posts-baseline space-y-2">
                       <dl>
                         <dt className="sr-only">Publicado em</dt>
                         <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
@@ -59,12 +59,19 @@ export default function ListLayout({ posts }) {
                         <div>
                           <h3 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link
-                              onClick={() => setPostSelected(post)}
+                              onClick={() => {
+                                if (post.link) {
+                                  window.open(post.link, '_blank')
+                                } else {
+                                  setPostSelected(post)
+                                }
+                              }}
                               className="text-gray-900 dark:text-gray-100"
                             >
                               {post.title}
                             </Link>
                           </h3>
+                          <p className="text-gray-500">{post.subtitle}</p>
                         </div>
                         <div className="prose max-w-none text-gray-500 dark:text-gray-400">{}</div>
                       </div>
