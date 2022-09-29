@@ -17,6 +17,7 @@ import Empresarial from '@/data/expertises/details/Empresarial'
 import Imobiliario from '@/data/expertises/details/Imobiliario'
 import RecuperacaoJudicial from '@/data/expertises/details/RecuperacaoJudicial'
 import Societario from '@/data/expertises/details/Societario'
+import api from 'services/api'
 
 const customStyles = {
   content: {
@@ -137,7 +138,9 @@ export default function Home() {
     ],
   }
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+
     if (name && email && phone && message && profession && subject && type) {
       const data = {
         name,
@@ -148,22 +151,52 @@ export default function Home() {
         profession,
         type,
       }
-      const response = await fetch('/api/sendEmail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      })
-      const result = await response.json()
-      if (result.success) {
+
+      const html = `<p><strong>Nome</strong></p>
+
+      <p>${name}</p>
+      
+      <p><strong>Telefone</strong></p>
+      
+      <p>${phone}</p>
+      
+      <p><strong>Email</strong></p>
+      
+      <p>${email}</p>
+      
+      <p><strong>Profiss&atilde;o</strong></p>
+      
+      <p>${profession}</p>
+      
+      <p><strong>Motivo do Contato</strong></p>
+      
+      <p>${subject}</p>
+      
+      <p><strong>Como nos conheceu?</strong></p>
+      
+      <p>${type}</p>
+      
+      <p><strong>Messagem</strong></p>
+      
+      <p>${message}</p>`
+
+      try {
+        const response = await api.post('/email', { message: html })
         alert('Mensagem enviada com sucesso!')
-      } else {
+      } catch (error) {
         alert('Erro ao enviar mensagem!')
       }
     } else {
       alert('Preencha todos os campos!')
     }
+
+    setEmail('')
+    setMessage('')
+    setName('')
+    setProfession('')
+    setSubject('')
+    setType('')
+    setPhone('')
   }
 
   return (
@@ -317,7 +350,7 @@ export default function Home() {
           </div>
           <div>
             <div className="md:flex-column flex flex-col items-start justify-start md:items-center md:justify-center md:space-x-6">
-              <form className="mt-8 w-full max-w-lg">
+              <form className="mt-8 w-full max-w-lg" onSubmit={handleSubmit}>
                 <div className="-mx-3 mb-2 flex flex-wrap">
                   <div className="mb-0 w-full px-3">
                     <input
@@ -325,6 +358,10 @@ export default function Home() {
                       id="grid-name"
                       type="text"
                       placeholder="Nome"
+                      value={name}
+                      onChange={(event) => {
+                        setName(event.target.value)
+                      }}
                     />
                   </div>
                 </div>
@@ -335,6 +372,10 @@ export default function Home() {
                       id="grid-name"
                       type="text"
                       placeholder="Telefone"
+                      value={phone}
+                      onChange={(event) => {
+                        setPhone(event.target.value)
+                      }}
                     />
                   </div>
                 </div>
@@ -345,6 +386,10 @@ export default function Home() {
                       id="grid-name"
                       type="text"
                       placeholder="E-mail"
+                      value={email}
+                      onChange={(event) => {
+                        setEmail(event.target.value)
+                      }}
                     />
                   </div>
                 </div>
@@ -355,6 +400,10 @@ export default function Home() {
                       id="grid-name"
                       type="text"
                       placeholder="Profissão"
+                      value={profession}
+                      onChange={(event) => {
+                        setProfession(event.target.value)
+                      }}
                     />
                   </div>
                 </div>
@@ -363,6 +412,10 @@ export default function Home() {
                     <select
                       id="assuntos"
                       className="mb-2 block w-full appearance-none rounded border bg-transparent py-2 px-2 leading-tight text-gray-500 outline-none focus:bg-white"
+                      value={subject}
+                      onChange={(event) => {
+                        setSubject(event.target.value)
+                      }}
                     >
                       <option selected>Qual o motivo do contato?</option>
                       <option value="Quero ser cliente">Quero ser cliente</option>
@@ -386,6 +439,10 @@ export default function Home() {
                     <select
                       id="countries"
                       className="mb-2 block w-full appearance-none rounded border bg-transparent py-2 px-2 leading-tight text-gray-500 focus:bg-white focus:outline-none"
+                      value={type}
+                      onChange={(event) => {
+                        setType(event.target.value)
+                      }}
                     >
                       <option selected>Como nos conheceu?</option>
                       <option value="Indicação">Indicação</option>
@@ -403,6 +460,10 @@ export default function Home() {
                       rows="4"
                       className="mb-2 block w-full appearance-none rounded border bg-transparent py-2 px-2 leading-tight text-gray-700 focus:bg-white focus:outline-none"
                       placeholder="Mensagem"
+                      value={message}
+                      onChange={(event) => {
+                        setMessage(event.target.value)
+                      }}
                     ></textarea>
                   </div>
                 </div>
