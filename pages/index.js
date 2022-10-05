@@ -250,32 +250,38 @@ export default function Home() {
           >
             <Slider {...settings}>
               {dataMissions.map((item, idx) => (
-                <div key={item} className="p-2">
-                  {idx - 1 === imgIndex ? (
-                    <div className="flex h-60 flex-col justify-center bg-neutral-900">
-                      <div className="self-center">
-                        <img src={item.icon} alt="home" className="w-14" />
-                      </div>
-                      <p className="text-center text-lg">{item.title}</p>
-                      <p className="self-center text-center text-xs font-hairline sm:w-11/12 sm:text-sm">
-                        {item.text}
-                      </p>
+                <>
+                  {item.title ? (
+                    <div key={item} className="p-2">
+                      {idx - 1 === imgIndex ? (
+                        <div className="flex h-60 flex-col justify-center bg-neutral-900">
+                          <div className="self-center">
+                            <img src={item.icon} alt="home" className="w-14" />
+                          </div>
+                          <p className="text-center text-lg">{item.title}</p>
+                          <p className="self-center text-center text-xs font-hairline sm:w-11/12 sm:text-sm">
+                            {item.text}
+                          </p>
+                        </div>
+                      ) : (
+                        <div
+                          key={item}
+                          className="flex h-60 flex-col justify-center bg-neutral-900 sm:mt-8 sm:h-44"
+                        >
+                          <div className="self-center">
+                            <img src={item.icon} alt="home" className="w-14 sm:w-12" />
+                          </div>
+                          <p className="text-center text-lg sm:text-sm">{item.title}</p>
+                          <p className="w-4/5 self-center pt-4 text-center text-xs font-hairline sm:w-full sm:px-4 sm:pt-2">
+                            {item.text}
+                          </p>
+                        </div>
+                      )}
                     </div>
                   ) : (
-                    <div
-                      key={item}
-                      className="flex h-60 flex-col justify-center bg-neutral-900 sm:mt-8 sm:h-44"
-                    >
-                      <div className="self-center">
-                        <img src={item.icon} alt="home" className="w-14 sm:w-12" />
-                      </div>
-                      <p className="text-center text-lg sm:text-sm">{item.title}</p>
-                      <p className="w-4/5 self-center pt-4 text-center text-xs font-hairline sm:w-full sm:px-4 sm:pt-2">
-                        {item.text}
-                      </p>
-                    </div>
+                    <></>
                   )}
-                </div>
+                </>
               ))}
             </Slider>
           </div>
@@ -314,9 +320,9 @@ export default function Home() {
                     boxShadow: 'inset 0 0 5em black',
                   }}
                 >
-                  <div className="t flex h-36 w-32 flex-col justify-center bg-[url('/static/images/rounded-card.png')]">
+                  <div className="mb-4 flex h-32 w-32 rotate-45 flex-col items-center justify-center rounded-[153px] border-y-4 border-[#7C52F6] bg-gradient-to-r from-[#4A4752] to-[#322C45] transition-all hover:border-x-4 hover:border-y-0">
                     <div className="self-center">
-                      <img src={item.icon} alt="home" className="ml-4 w-10" />
+                      <img src={item.icon} alt="home" className="w-10 -rotate-45" />
                     </div>
                   </div>
                   <div className="px-4 pb-4">
