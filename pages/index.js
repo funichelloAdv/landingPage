@@ -288,7 +288,7 @@ export default function Home() {
         </div>
         <div
           id="areas-atuacao"
-          className="flex w-full flex-col justify-evenly bg-neutral-900 p-8 pt-16 sm:flex-row sm:p-0 sm:pt-16"
+          className="flex w-full flex-col justify-evenly bg-neutral-900 p-8 py-16 sm:flex-row sm:p-0 sm:py-16"
         >
           <div className="w-full sm:w-1/2">
             <Image
@@ -308,7 +308,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="w-full bg-neutral-900 px-12 pt-8 pb-24 sm:pt-24">
+        <div className="w-full px-12 pt-8 pb-24 sm:pt-24">
           <Slider {...settings2} className="sm:px-36">
             {dataExpertise.map((item) => (
               <div key={item}>
@@ -344,6 +344,40 @@ export default function Home() {
               </div>
             ))}
           </Slider>
+        </div>
+        <div className="w-full px-8 pt-8 pb-24 sm:pt-8">
+          <div className="mb-16 flex flex-col items-center">
+            <div className="text-xl md:text-3xl">PROFISSIONAIS</div>
+            <div className="mt-4 mb-4 flex w-[150px] flex-col items-center md:w-[225px]">
+              <div className="h-1 w-28 bg-violet-500 md:w-40" />
+            </div>
+          </div>
+          <div className="flex w-full flex-col items-center justify-center md:flex-row">
+            <div className="w-[300px] md:h-[300px] md:w-[215px] md:pr-8">
+              <img
+                src={'/static/images/gabriel.jpeg'}
+                alt="Gabriel Funichello"
+                className="sm:h-full md:w-full"
+              />
+            </div>
+            <div className="flex h-[300px] w-[300px] flex-col justify-between sm:w-[450px]">
+              <p className="my-4 text-xl text-gray-300 md:my-0">Gabriel Funichello</p>
+              <p className="text-justify text-sm text-gray-400">
+                Gabriel Funichello é sócio e fundador do FA Advogados. Formado em direito pela
+                Universidade de Ribeirão Preto, com pós graduações pela Escola Brasileira de Direito
+                nas áreas de Direito Civil, Direito do Trabalho, Direito Tributário, Direito
+                Societário, Direito Contratual e Responsabilidade Civil.
+              </p>
+              <p className="text-justify text-sm text-gray-400">
+                Conta com forte atuação na advocacia contenciosa e relevante experiência no
+                assessoramento jurídico de empresas.
+              </p>
+              <p className="text-justify text-sm text-gray-400">
+                Atua como conselheiro de startups em todos os estágios, tais como Ideação, Operação,
+                Tração e Scale-up.
+              </p>
+            </div>
+          </div>
         </div>
         <div id="contact" className="my-16 divide-y divide-violet-500 px-8 sm:px-0">
           <div className="mb-4">
