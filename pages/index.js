@@ -374,10 +374,6 @@ export default function Home() {
                 Conta com forte atuação na advocacia contenciosa e relevante experiência no
                 assessoramento jurídico de empresas.
               </p>
-              <p className="text-justify text-sm text-gray-400">
-                Atua como conselheiro de startups em todos os estágios, tais como Ideação, Operação,
-                Tração e Scale-up.
-              </p>
             </div>
           </div>
         </div>
