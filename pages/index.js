@@ -381,12 +381,15 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex w-full flex-row items-end justify-center">
-          <div id="contact" className="my-16 w-[50%] p-4 px-8 sm:px-0">
-            <div className="mb-4">
+        <div className="flex w-full flex-col items-end justify-center sm:flex-row">
+          <div id="contact" className="my-16 w-full p-4 px-8 sm:w-[50%] sm:px-0">
+            <div className="mb-4 flex flex-col justify-center">
               <h1 className="tracking-light text-white-300 text-center text-3xl leading-9 sm:text-xl sm:leading-10 md:text-4xl md:leading-14">
                 Contato
               </h1>
+              <a className="text-center underline" href="tel:+5516994510470">
+                16 99451-0470
+              </a>
               <p className="text-center font-light text-gray-300">
                 Entre em contato conosco e tire suas dúvidas.
               </p>
@@ -510,7 +513,7 @@ export default function Home() {
                       ></textarea>
                     </div>
                   </div>
-                  <div className="flex flex-col justify-center">
+                  <div className="flex w-[50%] justify-center sm:w-full">
                     <button className="rounded border border-gray-400 bg-transparent py-2 px-4 font-semibold text-gray-400 hover:border-transparent hover:bg-violet-500 hover:text-white">
                       Enviar
                     </button>
@@ -519,7 +522,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-[50%] p-16">
+          <div className="w-full p-16 sm:w-[50%]">
             <MyMap />
           </div>
         </div>
