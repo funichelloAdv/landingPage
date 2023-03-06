@@ -381,7 +381,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex w-full flex-col items-end justify-center sm:flex-row">
+        <div className="flex w-full flex-col items-center justify-center sm:flex-row">
           <div id="contact" className="my-16 w-full p-4 px-8 sm:w-[50%] sm:px-0">
             <div className="mb-4 flex flex-col justify-center">
               <h1 className="tracking-light text-white-300 text-center text-3xl leading-9 sm:text-xl sm:leading-10 md:text-4xl md:leading-14">
@@ -522,7 +522,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-full p-16 sm:w-[50%]">
+          <div className="z-0 w-full p-16 sm:w-[50%]">
             <MyMap />
           </div>
         </div>
