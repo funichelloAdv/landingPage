@@ -518,7 +518,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="z-0 w-full p-16 sm:w-[50%]">
+          <div className="z-0 w-full py-8 px-4 sm:w-[50%] sm:p-16">
             <MyMap />
           </div>
         </div>
