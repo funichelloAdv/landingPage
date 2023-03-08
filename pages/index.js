@@ -354,15 +354,15 @@ export default function Home() {
               <div className="h-1 w-28 bg-violet-500 md:w-40" />
             </div>
           </div>
-          <div className="flex w-full flex-col items-center justify-center md:flex-row">
-            <div className="w-[300px] md:h-[300px] md:w-[215px] md:pr-8">
+          <div className="flex w-full flex-col items-center justify-center md:flex-row md:items-start">
+            <div className="w-[300px] md:h-[300px] md:w-[275px] md:pr-8">
               <img
                 src={'/static/images/gabriel.jpeg'}
                 alt="Gabriel Funichello"
-                className="sm:h-full md:w-full"
+                className="w-full sm:w-[300px]"
               />
             </div>
-            <div className="flex h-[300px] w-[300px] flex-col justify-between sm:w-[450px]">
+            <div className="flex h-[250px] w-[300px] flex-col justify-between sm:w-[450px]">
               <p className="my-4 text-xl text-gray-300 md:my-0">Gabriel Funichello</p>
               <p className="text-justify text-sm text-gray-400">
                 Gabriel Funichello é sócio e fundador do FA Advogados. Formado em direito pela
