@@ -1,4 +1,5 @@
 [
+  {},
   {
     "icon": "/static/images/missions/1.png",
     "title": "INOVAÇÃO",
@@ -23,5 +24,6 @@
     "icon": "/static/images/missions/5.png",
     "title": "VISÃO",
     "text": "Nos dedicamos ao presente com lentes para o futuro. Estamos constantemente nos reinventando e evoluindo nossas soluções."
-  }
+  },
+  {}
 ]
