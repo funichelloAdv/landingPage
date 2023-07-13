@@ -362,7 +362,7 @@ export default function Home() {
                 className="w-full sm:w-[300px]"
               />
             </div>
-            <div className="flex h-[250px] w-[300px] flex-col justify-between sm:w-[450px]">
+            <div className="flex h-[350px] w-[300px] flex-col justify-between sm:w-[450px]">
               <p className="my-4 text-xl text-gray-300 md:my-0">Gabriel Funichello</p>
               <p className="text-justify text-sm text-gray-400">
                 Gabriel Funichello é sócio e fundador do Funichello Advogados. Formado em direito
