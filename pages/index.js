@@ -349,7 +349,7 @@ export default function Home() {
         </div>
         <div className="w-full px-8 pt-8 pb-24 sm:pt-8">
           <div className="mb-16 flex flex-col items-center">
-            <div className="text-xl md:text-3xl">PROFISSIONAIS</div>
+            <div className="text-xl md:text-3xl">SÓCIO-FUNDADOR</div>
             <div className="mt-4 mb-4 flex w-[150px] flex-col items-center md:w-[225px]">
               <div className="h-1 w-28 bg-violet-500 md:w-40" />
             </div>
@@ -357,7 +357,7 @@ export default function Home() {
           <div className="flex w-full flex-col items-center justify-center md:flex-row md:items-start">
             <div className="w-[300px] md:h-[300px] md:w-[275px] md:pr-8">
               <img
-                src={'/static/images/gabriel.jpeg'}
+                src={'/static/images/socio-fundador.jpeg'}
                 alt="Gabriel Funichello"
                 className="w-full sm:w-[300px]"
               />
@@ -365,10 +365,15 @@ export default function Home() {
             <div className="flex h-[250px] w-[300px] flex-col justify-between sm:w-[450px]">
               <p className="my-4 text-xl text-gray-300 md:my-0">Gabriel Funichello</p>
               <p className="text-justify text-sm text-gray-400">
-                Gabriel Funichello é sócio e fundador do FA Advogados. Formado em direito pela
-                Universidade de Ribeirão Preto, com pós graduações pela Escola Brasileira de Direito
-                nas áreas de Direito Civil, Direito do Trabalho, Direito Tributário, Direito
-                Societário, Direito Contratual e Responsabilidade Civil.
+                Gabriel Funichello é sócio e fundador do Funichello Advogados. Formado em direito
+                pela Universidade de Ribeirão Preto (Unaerp); Pós graduado em Advocacia Contenciosa
+                Cível pela faculdade Legale; Pós graduado em Direito do Trabalho pela Escola
+                Brasileira de Direito (EBRADI); Pós graduado em Direito Tributário pela Escola
+                Brasileira de Direito (EBRADI); Pós graduado em Direito Societário pela Escola
+                Brasileira de Direito (EBRADI); Pós graduado em Direito Contratual e
+                Responsabilidade Civil pela Escola Brasileira de Direito (EBRADI); Pós graduado em
+                Direito Imobiliário pela Escola Paulista de Direito (EPD); Curso de Extensão em
+                Direito do Seguro e Resseguro pela Fundação Getúlio Vargas (FGV).
               </p>
               <p className="text-justify text-sm text-gray-400">
                 Conta com forte atuação na advocacia contenciosa e relevante experiência no
