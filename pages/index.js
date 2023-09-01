@@ -347,7 +347,7 @@ export default function Home() {
             ))}
           </Slider>
         </div>
-        <div className="w-full px-8 pt-8 pb-24 sm:pt-8">
+        {/* <div className="w-full px-8 pt-8 pb-24 sm:pt-8">
           <div className="mb-16 flex flex-col items-center">
             <div className="text-xl md:text-3xl">SÓCIO-FUNDADOR</div>
             <div className="mt-4 mb-4 flex w-[150px] flex-col items-center md:w-[225px]">
@@ -381,7 +381,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="flex w-full flex-col items-center justify-center sm:flex-row">
           <div id="contact" className="my-16 w-full p-4 px-8 sm:w-[50%] sm:px-0">
             <div className="mb-4 flex flex-col justify-center">
