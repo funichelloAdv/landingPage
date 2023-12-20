@@ -7,7 +7,7 @@ export default function ListLayout({ posts }) {
   const [searchValue, setSearchValue] = useState('')
   const [postSelected, setPostSelected] = useState(null)
 
-  console.log(posts)
+  // console.log(posts)
 
   return (
     <>
